@@ -1,6 +1,4 @@
-# Project Overview
-
-## Ranked
+# Ranked
 
 Ever want to remember the best burger you've ever had? What if you had an application where you could rank your top 100 best? Add new burgers to the list and bump pre-existing burgers out of their ranking when one superceeds them by dragging and dropping them to their new ranking. 
 
@@ -39,8 +37,7 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
 
 ## Timeframes
-
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
+Total aloted hours: 20. 3/5/4/4/4 
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
