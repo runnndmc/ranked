@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to Ranked</title>
-    <script src='script.js' defer></script> <!-- The defer attribute is a boolean attribute. When present, it specifies that the script is executed when the page has finished parsing. -->
-</head>
-<body>
-    <h2>Hello, Ranked</h2>
-    
-</body>
+    <script src="script.js" defer></script>
+    <!-- The defer attribute is a boolean attribute. When present, it specifies that the script is executed when the page has finished parsing. -->
+  </head>
+  <body>
+    <header>
+      <h2>Hello, Ranked</h2>
+    </header>
+
+    <p>add a new food</p>
+
+    <form>
+        <label>
+            New Food
+            <input name='food' type='text' maxlength="500" required placeholder="foods!">
+        </label>
+        <button type='submit'>Add Food</button>
+    </form>
+
+    <section class='foods'>
+        <ul id='foods'>
+            <em>loading foods&hellip;</em>
+        </ul>
+    </section>
+
+    <footer>Made by <a href="https://github.com/runnndmc">DMC</a></footer>
+  </body>
 </html>
