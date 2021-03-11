@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/runnndmc/ranked/issues"
   },
-  "homepage": "https://github.com/runnndmc/ranked#readme"
+  "homepage": "https://github.com/runnndmc/ranked#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
