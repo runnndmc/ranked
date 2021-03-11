@@ -1,0 +1,19 @@
+{
+  "name": "ranked",
+  "version": "1.0.0",
+  "description": "Ever want to remember the best burger you've ever had? What if you had an application where you could rank your top 100 best? Add new burgers to the list and bump pre-existing burgers out of their ranking when one superceeds them by dragging and dropping them to their new ranking.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runnndmc/ranked.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/runnndmc/ranked/issues"
+  },
+  "homepage": "https://github.com/runnndmc/ranked#readme"
+}
