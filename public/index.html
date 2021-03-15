@@ -13,22 +13,32 @@
       <h2>Hello, Ranked</h2>
     </header>
 
-    <p>add a new food</p>
+    <p class="what-to-do-p">Add a new food</p>
 
-    <form>
-        <label>
-            New Food
-            <input name='food' type='text' maxlength="500" required placeholder="foods!">
-        </label>
-        <button type='submit'>Add Food</button>
+    <form class="add-new-input-form">
+      <label class="new-food-label">
+        New Food
+        <input
+          class="new-food-input"
+          name="food"
+          type="text"
+          maxlength="500"
+          required
+          placeholder="foods!"
+        />
+      </label>
+      
+      <button class="new-food-add-button" type="submit">Add</button>
     </form>
 
-    <section class='foods'>
-        <ul id='foods'>
-            <em>loading foods&hellip;</em>
-        </ul>
+    <section class="foods-section">
+      <ul id="foods-ul">
+        <em>loading foods&hellip;</em>
+      </ul>
     </section>
 
-    <footer>Made by <a href="https://github.com/runnndmc">DMC</a></footer>
+    <footer class="footer-info">
+      Made by <a href="https://github.com/runnndmc">DMC</a>
+    </footer>
   </body>
 </html>
