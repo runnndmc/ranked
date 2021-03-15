@@ -54,6 +54,13 @@ fetch("/foods")
 
             foodsInputForm.reset();
             foodsInputForm.elements.food.focus();
+
+            console.log(localStorage)
+
+/*             if(newFood){
+                localStorage.setItem("foodKey", newFood)
+                location.reload();
+            }
+ */
         });
-       
     });
