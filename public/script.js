@@ -13,11 +13,19 @@ function appendNewFood(food){
     //create a new element 
     const newListItem = document.createElement('li');
     let deleteButton = document.createElement('button');
+
+
     //have the new element have the text of the input given
     newListItem.innerText = food;
     deleteButton.innerText = "delete"
-
     newListItem.append(deleteButton)
+
+    if(newListItem){
+        localStorage.setItem("foodKey", newListItem)
+
+        foodsUnorderedList.innerHTML=localStorage.getItem("foodKey")
+    }
+
     //grab the parent of the list item and append the new element created 
     foodsUnorderedList.appendChild(newListItem);
     deleteButton.addEventListener('click', deleteListItem)
@@ -51,16 +59,11 @@ fetch("/foods")
             //and add it to the list
             foods.push(newFood);
             appendNewFood(newFood);
+            
 
             foodsInputForm.reset();
             foodsInputForm.elements.food.focus();
 
-            console.log(localStorage)
 
-/*             if(newFood){
-                localStorage.setItem("foodKey", newFood)
-                location.reload();
-            }
- */
         });
     });
