@@ -25,7 +25,8 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 |  Day | Deliverable | Status
 |---|---| ---|
 |March 12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|March 15| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|March 15| Core Application Structure (HTML, CSS, grid.) | Incomplete
+|March 15| Local Storage | Incomplete
 |March 16| Pseudocode / actual code | Incomplete
 |March 17| MVP | Incomplete
 |March 18| CSS Animations | Incomplete
