@@ -1,6 +1,8 @@
 //client side js, loaded by index.html
 //runs everytime the page is loaded
 
+const { response } = require("express");
+
 console.log('ello')
 
 
@@ -20,11 +22,11 @@ function appendNewFood(food){
     deleteButton.innerText = "delete"
     newListItem.append(deleteButton)
 
-    if(newListItem){
+/*     if(newListItem){
         localStorage.setItem("foodKey", newListItem)
 
         foodsUnorderedList.innerHTML=localStorage.getItem("foodKey")
-    }
+    } */
 
     //grab the parent of the list item and append the new element created 
     foodsUnorderedList.appendChild(newListItem);
@@ -42,6 +44,7 @@ function deleteListItem(){
 //fetch the initial list of foods in server.js
 fetch("/foods")
     .then(response => response.json()) //parse the json from the server
+console.log(response)
     .then(foods => {
         //remove the loading text
         foodsUnorderedList.firstElementChild.remove();
