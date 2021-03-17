@@ -2,13 +2,11 @@ const express = require("express");
 const PORT = process.env.PORT || 3000
 const app = express();
 
-console.log('dis node')
+const fs = require('fs');
+const data = fs.readFileSync('./public/foods.json');
+const foods = JSON.parse(data)
 
-const foods = [
-    'burger',
-    'fries',
-    'pizza'
-];
+console.log(foods)
 
 //make all of the files in public available
 app.use(express.static("public"));

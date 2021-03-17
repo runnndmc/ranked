@@ -1,0 +1,17 @@
+{
+    "ed123": {   
+        "foods": "burgers",
+        "userName": "ed123",
+        "rankedFoods": ["The Cure","Bar Room Burger", "Lamb Burger"],
+        "resturants": ["Houlihans","The Bar Room", "Icelandic Burger"],
+        "ranks": [2, 1, 3]
+    },
+    "daynac143": {   
+        "foods": "fries",
+        "userName": "daynac143",
+        "rankedFoods": ["House Style","House Fries", "Waffle"],
+        "resturants": ["Burger King","Five Guys", "Houlihans"],
+        "ranks": [2, 1, 3]
+    }
+}
+
