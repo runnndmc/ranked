@@ -40,7 +40,7 @@ app.get("/:profile/:username", function(req, res){
         username: username
     })
 })
-
+console.log(this)
 
 app.get("/add/:food/:rank?", addFood)
 
