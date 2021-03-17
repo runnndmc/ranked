@@ -25,7 +25,7 @@ app.get("/foods", function(req, res){
 })
 
 
-app.get("/:path", function(req, res){
+/* app.get("/:path", function(req, res){
     const path = req.params.path
     res.json({
         data: path
@@ -40,7 +40,26 @@ app.get("/:profile/:username", function(req, res){
         username: username
     })
 })
-console.log(this)
+*/
+app.post('/post', (req, res) => {
+    const body = req.body
+    console.log(body)
+    res.json({
+        confirmation: 'success, post req',
+        data: body
+    })
+})
+
+app.get("/query", function(req, res){
+    const food = req.query.food
+    const rank = req.query.rank
+
+    const data ={
+        food: food,
+        rank: rank 
+    }
+    res.render('profile', data)
+}) 
 
 app.get("/add/:food/:rank?", addFood)
 
@@ -56,7 +75,7 @@ function addFood(req, res){
     } else{
         foods[food] = rank
         const data = JSON.stringify(foods, null, 2)
-        fs.writeFile('foods.json', data, finished)
+        fs.writeFile('./public/foods.json', data, finished)
 
         function finished(err){
             console.log('all set')
@@ -64,11 +83,12 @@ function addFood(req, res){
         reply={
             food: food,
             rank: rank,
-            status: "success"
+            status: "success, add food"
         }
     }
     res.send(reply)
 }
+
 
 
 //listen for requests
