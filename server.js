@@ -3,6 +3,7 @@ const PORT = process.env.PORT || 3000
 const app = express();
 
 const fs = require('fs');
+const { finished } = require("stream");
 const data = fs.readFileSync('./public/foods.json');
 const foods = JSON.parse(data)
 
@@ -22,6 +23,53 @@ app.get("/foods", function(req, res){
     // express helps us tak JS objects and send them as json
     res.json(foods)
 })
+
+
+app.get("/:path", function(req, res){
+    const path = req.params.path
+    res.json({
+        data: path
+    })
+})
+
+app.get("/:profile/:username", function(req, res){
+    const profile = req.params.profile
+    const username = req.params.username
+    res.json({
+        profile: profile,
+        username: username
+    })
+})
+
+
+app.get("/add/:food/:rank?", addFood)
+
+function addFood(req, res){
+    const data = req.params
+    const food = data.food
+    const rank = Number(data.rank)
+    let reply;
+    if(!rank){
+        reply={
+            msg: "rank is required"
+        }
+    } else{
+        foods[food] = rank
+        const data = JSON.stringify(foods, null, 2)
+        fs.writeFile('foods.json', data, finished)
+
+        function finished(err){
+            console.log('all set')
+        }
+        reply={
+            food: food,
+            rank: rank,
+            status: "success"
+        }
+    }
+    res.send(reply)
+}
+
 
 //listen for requests
 app.listen(PORT, () => {

@@ -15,20 +15,28 @@
 
     <p class="what-to-do-p">Add a new food</p>
 
-    <form class="add-new-input-form">
-      <label class="new-food-label">
-        New Food
+    <form class="add-new-input-form" action="/post" method="POST">
+      <label class="new-label">
+        What Food?
         <input
-          class="new-food-input"
-          name="food"
+          class="new-input"
+          name="foods"
           type="text"
           maxlength="500"
-          required
-          placeholder="foods!"
+          placeholder="What food?"
         />
       </label>
-      
-      <button class="new-food-add-button" type="submit">Add</button>
+      <label class="new-label">
+        Rank
+        <input
+          class="new-input"
+          name="ranks"
+          type="text"
+          maxlength="100"
+          placeholder="rank"
+        />
+      </label>
+      <input class="new-food-add-button" type="submit" value="Add" />
     </form>
 
     <section class="foods-section">

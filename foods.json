@@ -1,0 +1,27 @@
+{
+  "ed123": {
+    "foods": [
+      "The Cure, Houlihans",
+      "Bar Room Burger,The Bar Room",
+      "Lamb Burger, Iceland"
+    ],
+    "ranks": [
+      2,
+      1,
+      3
+    ]
+  },
+  "daynac143": {
+    "foods": [
+      "fries, Warwick",
+      "fries, Halligans",
+      "waffle fries, Copper Barn"
+    ],
+    "ranks": [
+      2,
+      1,
+      3
+    ]
+  },
+  "cookies": 5
+}
