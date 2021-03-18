@@ -95,3 +95,5 @@ function addFood(req, res){
 app.listen(PORT, () => {
     console.log(`your app is listening on ${PORT}`);
 });
+
+module.exports = app

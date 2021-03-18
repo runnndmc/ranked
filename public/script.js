@@ -1,8 +1,18 @@
 //client side js, loaded by index.html
 //runs everytime the page is loaded
+/* import './regenerator-runtime/runtime';
+import axios from '../axios';
 
-console.log('ello')
+console.log("ello");
 
+const BASE_URL ='http://localhost:3000/'
+ */
+
+fetch('foods.json')
+    .then(response => response.json())
+    .then(json => console.log(json))
+
+/* 
 
 //define the variables that reference elements on our page
 const foodsUnorderedList = document.querySelector("#foods-ul");
@@ -57,3 +67,4 @@ fetch("/foods")
         });
        
     });
+ */
