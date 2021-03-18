@@ -42,11 +42,12 @@ app.get("/:profile/:username", function(req, res){
 })
 */
 app.post('/post', (req, res) => {
-    const body = req.body
-    console.log(body)
+    const foodData = select('.new-input').value()
+    console.log(foodData)
     res.json({
         confirmation: 'success, post req',
-        data: body
+        food: foodData
+//        rank: rankData
     })
 })
 

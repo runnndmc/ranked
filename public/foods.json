@@ -23,11 +23,12 @@
       3
     ]
   },
-  "burger": 10,
+  "burger": 15,
   "fries": 100,
   "chips": 3,
   "cake": 100,
   "cookies": 100,
   "chocolate": 10,
-  "juice": 10
+  "juice": 10,
+  "granola": 35
 }
