@@ -8,6 +8,7 @@
 //define the variables that reference elements on our page
 const foodsUnorderedList = document.querySelector("#foods-ul");
 const foodsInputForm = document.querySelector(".add-new-input-form");
+const foodInput = document.querySelector("new-input")
 
 //add a helper function that creates a list item for a newly inputted food 
 function appendNewFood(food){
@@ -45,12 +46,15 @@ fetch("/foods")
 
         foodsInputForm.addEventListener('submit', event => {
             event.preventDefault();
-            let newFood = foodsInputForm.elements.food.value;
-            foods.push(newFood);
+
+            let newFood = foodsInputForm.foods.value //.food.value;
+            console.log(newFood)
+
+            example.push(newFood);
             appendNewFood(newFood);
 
             foodsInputForm.reset();
-            foodsInputForm.elements.food.focus();
+           // foodsInputForm.elements.focus();
         });
 
     })
