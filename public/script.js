@@ -1,18 +1,9 @@
 //client side js, loaded by index.html
 //runs everytime the page is loaded
-/* import './regenerator-runtime/runtime';
-import axios from '../axios';
 
-console.log("ello");
 
-const BASE_URL ='http://localhost:3000/'
- */
 
-fetch('foods.json')
-    .then(response => response.json())
-    .then(json => console.log(json))
 
-/* 
 
 //define the variables that reference elements on our page
 const foodsUnorderedList = document.querySelector("#foods-ul");
@@ -44,27 +35,44 @@ function deleteListItem(){
 //fetch the initial list of foods in server.js
 fetch("/foods")
     .then(response => response.json()) //parse the json from the server
-    .then(foods => {
-        //remove the loading text
+    .then(json =>{
+        console.log(json.daynac143.foods)
+        const example = json.daynac143.foods
+
         foodsUnorderedList.firstElementChild.remove();
-        //iterate through every food and add it to our page
-        foods.forEach(appendNewFood);
 
-        //listen for the form to be submitted and add a new food when it is
+        example.forEach(appendNewFood);
+
         foodsInputForm.addEventListener('submit', event => {
-
-            //stop our submission from refreshing the page
             event.preventDefault();
-
-            //get food value 
             let newFood = foodsInputForm.elements.food.value;
-            //and add it to the list
             foods.push(newFood);
             appendNewFood(newFood);
 
             foodsInputForm.reset();
             foodsInputForm.elements.food.focus();
         });
+
+    })
+
+
+    //.then(foods => {
+       /// console.log(foods)
+        //remove the loading text
        
-    });
- */
+        //iterate through every food and add it to our page
+
+        //listen for the form to be submitted and add a new food when it is
+      
+
+            //stop our submission from refreshing the page
+           
+
+            //get food value 
+            
+            //and add it to the list
+
+
+       
+    //});
+
