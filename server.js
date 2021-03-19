@@ -3,18 +3,23 @@ const PORT = process.env.PORT || 3000
 const app = express();
 
 const fs = require('fs');
-const { finished } = require("stream");
-
 const data = fs.readFileSync('./public/foods.json');
 const foods = JSON.parse(data)
-//const input = require('/input/food')
 
 console.log(foods)
 
+/* try{
+    const databases = JSON.parse(data)
+    databases.forEach(db => {
+        console.log(`${db.food}: ${db.rank}`)
+    })
+} catch(err){
+    console.log(`${err}`)
+} 
+ */
+
 //make all of the files in public available
 app.use(express.static("public"));
-//app.use('/input', input)
-
 
 
 //get req to home page and then a function
@@ -45,9 +50,10 @@ app.get("/:path", function(req, res){
         foodData: body
     })
 })
+*/
 
-app.post('/post', (req, res) => {
-    const foodData = select('.new-input').value()
+app.post(function(req, res){
+    const foodData = select('#analyze').value()
     console.log(foodData)
     res.json({
         confirmation: 'success, post req',
@@ -55,6 +61,7 @@ app.post('/post', (req, res) => {
        rank: rankData
     })
 })
+
 
 app.get("/query", function(req, res){
     const food = req.query.food
@@ -65,39 +72,11 @@ app.get("/query", function(req, res){
         rank: rank 
     }
     res.render('profile', data)
-})  */
+})  
 
 app.get("/add/:food/:rank?", addFood)
 
-app.post('/foods', addFoodInput)
 
-function addFoodInput(req, res){
-    const data = req.body
-    const food = data.daynac143.foods
-    const rank = Number(data.daynac143.ranks)
-    let reply;
-
-    if(!rank){
-        reply={
-            msg: "rank is required"
-        }
-    } else{
-        foods[food] = rank
-        const data = JSON.stringify(foods, null, 2)
-        fs.writeFile('./public/foods.json', data, finished)
-
-        function finished(err){
-            console.log('written to json')
-        }
-        reply={
-            food: food, 
-            rank: rank, status: "success, add food"
-        }
-    
-    res.send(reply)
-        
-    }
-}
 
 function addFood(req, res){
     const data = req.params
@@ -134,4 +113,3 @@ app.listen(PORT, () => {
 
 module.exports = app
 
-//https://www.youtube.com/watch?v=GZ2nwxhQUTU
