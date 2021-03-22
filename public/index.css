@@ -1,0 +1,37 @@
+body{
+    background-color: moccasin;
+}
+header{
+    background-color: oldlace;
+}
+.logo{
+    display:inline-block;
+    background-color: olive;
+}
+.form-field{
+    background-color: forestgreen;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    align-content: space-around;
+}
+.foods-section{
+    background-color: powderblue;
+}
+#foods-ul{
+    background-color: peru;
+    display:inline-block;
+
+}
+li{
+    background-color: palegreen;
+}
+footer{
+    background: fuchsia;
+}
+.footer-info{
+    background-color: ghostwhite;
+    display:inline-block;
+}
