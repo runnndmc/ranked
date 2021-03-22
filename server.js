@@ -3,7 +3,10 @@ const PORT = process.env.PORT || 3000
 const app = express();
 
 const fs = require('fs');
-const data = fs.readFileSync('./public/foods.json');
+const data =  fs.readFileSync('./public/foods.json');
+// const readFile = path => fs.readFileSync(path, 'utf8');
+// const foodsFile = readFile('./public/foods.json');
+// const foods1 = JSON.parse(foodsFile);
 const foods = JSON.parse(data)
 
 console.log(foods)
