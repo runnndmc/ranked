@@ -1,5 +1,6 @@
-{
-  "ed123": {
+[
+  {
+    "username": "ed123",
     "foods": [
       "The Cure, Houlihans",
       "Bar Room Burger,The Bar Room",
@@ -11,7 +12,8 @@
       3
     ]
   },
-  "daynac143": {
+  {
+  "username": "daynac143",
     "foods": [
       "fries, Warwick",
       "fries, Halligans",
@@ -22,13 +24,5 @@
       1,
       3
     ]
-  },
-  "burger": 15,
-  "fries": 100,
-  "chips": 3,
-  "cake": 100,
-  "cookies": 100,
-  "chocolate": 10,
-  "juice": 10,
-  "granola": 35
-}
+  }
+] 

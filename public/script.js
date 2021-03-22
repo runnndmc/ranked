@@ -64,11 +64,29 @@ fetch("/foods")
   .then((response) => response.json()) //parse the json from the server
   .then((json) => {
     console.log(json);
-    const example = json.daynac143.foods;
-
+    const fullJson = json
+  
     foodsUnorderedList.firstElementChild.remove();
 
-    example.forEach(appendNewFood);
+
+    function findUser(user){
+      fullJson.forEach((element) => {
+        if (element.username === 'daynac143')
+        return element.foods.forEach(appendNewFood);
+      })
+    }
+
+
+
+  // const useFound = fullJson.filter((user)=> {
+  //     if(user === json.username){
+  //       console.log(user) 
+        
+  //     } else {
+  //       return "user not found"
+  //     }
+
+  //   })
 
     foodsInputForm.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -77,7 +95,7 @@ fetch("/foods")
       console.log(newFood);
 
       example.push(newFood);
-      console.log(example)
+
       appendNewFood(newFood);
     
 
