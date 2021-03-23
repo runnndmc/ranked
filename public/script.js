@@ -1,22 +1,20 @@
 //client side js, loaded by index.html
 //runs everytime the page is loaded
 
-/* 
-const api = axios.create({
-    baseURL: 'http://localhost:3000/foods'
-}) */
+
 //define the variables that reference elements on our page
+
 const foodsUnorderedList = document.querySelector("#foods-ul");
 const foodsInputForm = document.querySelector(".add-new-input-form");
 const foodInput = document.querySelector("new-input");
 
 
 
-//add a helper function that creates a list item for a newly inputted food
+// create a list item for a newly inputted food
 function appendNewFood(food) {
-  //create a new element
   const newListItem = document.createElement("li");
-  let deleteButton = document.createElement("button");
+  const deleteButton = document.createElement("button");
+
   //have the new element have the text of the input given
   newListItem.innerText = food;
   deleteButton.innerText = "delete";
@@ -78,40 +76,49 @@ fetch("/foods")
 
 
 
-  // const useFound = fullJson.filter((user)=> {
-  //     if(user === json.username){
-  //       console.log(user) 
-        
-  //     } else {
-  //       return "user not found"
-  //     }
-
-  //   })
+  
 
     foodsInputForm.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      let newFood = foodsInputForm.foods.value; //.food.value;
-      console.log(newFood);
+      const formElements = document.querySelector('.add-new-input-form').elements
+      const formData = [];
+      for(let i=0; i<formElements.length; i++){
+        if(formElements[i].type !== "submit"){
+          formData[formElements[i].name]=formElements[i].value
+        }
+      }
+      console.log(formData)
+      // const data = new URLSearchParams(new FormData(form).entries())
+  
 
-      example.push(newFood);
+  
+      // let newFood = foodsInputForm.foods.value;
+      // let newRank = foodsInputForm.ranks.value; 
+      // let userInput = foodsInputForm.username.value; 
 
-      appendNewFood(newFood);
+      // console.log(newFood);
+      // console.log(newRank);
+      // console.log(userInput);
+
+      
+      // fullJson.push(newFood);
+
+      // appendNewFood(newFood);
     
 
-/*       let method = "POST"
-      let postData = newFood
-      let shouldBeAsync = true;
-      let request = new XMLHttpRequest()
-      request.onload = function(){
-        var status = request.status; // HTTP response status, e.g., 200 for "200 OK"
-        var data = request.responseText
-      }
-
-      request.open(method, api, shouldBeAsync)
-      request.setRequestHeader("Content-Type", "application/json")
-      request.send(postData)
-      foodsInputForm.reset(); */
+      // let method = "POST"
+      // let postData = newFood
+      // let shouldBeAsync = true;
+      // let request = new XMLHttpRequest()
+      // request.onload = function(){
+      //   var status = request.status; // HTTP response status, e.g., 200 for "200 OK"
+      //   var data = request.responseText
+      // }
+      // request.open(method, api, shouldBeAsync)
+      // request.setRequestHeader("Content-Type", "application/json")
+      // request.send(postData)
+      // foodsInputForm.reset();
       // foodsInputForm.elements.focus();
     });
   });
