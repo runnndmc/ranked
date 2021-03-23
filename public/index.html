@@ -15,13 +15,24 @@
       <h2>Hello, Ranked</h2>
     </header>
 
-    <p class="what-to-do-p">Add a new food</p>
+    <p class="what-to-do-p">Add a new food and rank</p>
 
     <form action="http://localhost:3000/" method="POST" class='add-new-input-form'>
       <label class="new-label">
+        Username
+        <input
+          id='analyze'
+          class="new-input"
+          name="username"
+          type="text"
+          maxlength="16"
+          placeholder="Enter Your Username"
+        />
+      </label>
+      <label class="new-label">
         What Food?
         <input
-        id='analyze'
+          id='analyze'
           class="new-input"
           name="foods"
           type="text"
@@ -30,13 +41,14 @@
         />
       </label>
       <label class="new-label">
-        Rank
+        Rank It!
         <input
+          id='analyze'
           class="new-input"
           name="ranks"
           type="text"
           maxlength="100"
-          placeholder="rank"
+          placeholder="Whats the Rank?"
         />
       </label>
       <input class="new-food-add-button" type="submit" value="Add" />
