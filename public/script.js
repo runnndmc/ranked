@@ -68,7 +68,7 @@ fetch("/foods")
 
       const formElements = document.querySelector(".add-new-input-form")
         .elements;
-      const formData = [];
+      const formData = {};
       for (let i = 0; i < formElements.length; i++) {
         if (formElements[i].type !== "submit") {
           formData[formElements[i].name] = formElements[i].value;
